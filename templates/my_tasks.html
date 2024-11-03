@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>My Tasks</h2>
+
+    <!-- Add Task Button - Always Visible -->
+    <a href="{{ url_for('app.add_task') }}" class="btn btn-primary">Add Task</a>
+
+    {% if tasks %}
+        <p>Total tasks: {{ count }}</p>
+
+        <!-- Search Form -->
+        <form method="GET">
+            <input type="text" name="search" placeholder="Search by title">
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- Tasks Table -->
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Due Date</th>
+                <th>Category</th>
+            </tr>
+            {% for task in tasks %}
+                <tr>
+                    <td>{{ task.title }}</td>
+                    <td>{{ task.due_date }}</td>
+                    <td>{{ task.category }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <!-- Message if No Tasks Exist -->
+        <p>No tasks for you. Please add one.</p>
+    {% endif %}
+{% endblock %}
