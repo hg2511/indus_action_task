@@ -29,4 +29,5 @@ This is a simple Flask-based application for managing tasks. Users can register,
 
 ```bash
 git clone https://github.com/hg2511/indus_action_task.git
-cd my-tasks-app
+cd indus_action_task
+
