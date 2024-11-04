@@ -16,7 +16,7 @@ This is a simple Flask-based application for managing tasks. Users can register,
 
 - **Backend**: Flask (Python)
 - **Database**: SQLite (default, can be configured for other databases)
-- **Deployment**: Compatible with IaaS providers such as Render and Heroku
+
 
 ## Prerequisites
 
